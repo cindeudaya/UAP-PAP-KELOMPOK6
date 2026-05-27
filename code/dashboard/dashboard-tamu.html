@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebaikan Digital - Platform Donasi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="logo-pap.png" alt="logo" />
+        </div>
+        <nav class="nav-menu">
+          <a href="#" class="active">Beranda</a>
+          <a href="#">Campaign</a>
+          <a href="#">Event</a>
+          <a href="#">Tentang Kami</a>
+        </nav>
+        <div class="nav-auth">
+          <button onclick="showAlert('Masuk')" class="btn btn-outline">
+            Masuk
+          </button>
+          <button onclick="showAlert('Daftar')" class="btn btn-primary">
+            Daftar
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Kebaikan kecil hari ini, dampak besar untuk masa depan.</h1>
+        <p>
+          Bersama Kebaikan Digital, wujudkan dunia yang lebih baik dengan
+          berbagi dan peduli terhadap sesama.
+        </p>
+        <div class="hero-buttons">
+          <button
+            onclick="scrollToCampaign()"
+            class="btn btn-primary btn-large"
+          >
+            Mulai Berbagi
+          </button>
+          <button
+            onclick="showAlert('Tentang Kami')"
+            class="btn btn-outline btn-large"
+          >
+            Tentang Kami
+          </button>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="hero-bg-circle">
+          <img src="ilustrasi-dashboard.png" alt="Ilustrasi Berbagi" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-category container">
+      <div class="stats-card">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="logo-dana.png" alt="" />
+          </div>
+          <div>
+            <h3>Rp 500.000.000+</h3>
+            <p>Dana Terkumpul</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="logo-campaign.png" alt="" />
+          </div>
+          <div>
+            <h3>320+</h3>
+            <p>Campaign</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <img src="logo-donatur.png" alt="logo-donatur" />
+          </div>
+          <div>
+            <h3>10rb</h3>
+            <p>Donatur Aktif</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <span class="category-title">Mau donasi apa hari ini?</span>
+        <div class="category-grid">
+          <button onclick="showAlert('Kategori Zakat')" class="cat-btn">
+            <img src="logo-zakat.png" alt="logo-zakat">
+            <span>Zakat</span>
+          </button>
+          <button onclick="showAlert('Kategori Donasi')" class="cat-btn">
+            <img src="logo-donasi.png" alt="logo-donasi">
+            <span>Donasi</span>
+          </button>
+          <button onclick="showAlert('Kategori Buku')" class="cat-btn">
+            <img src="logo-buku.png" alt="logo-buku">
+            <span>Buku</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section-spacing">
+      <h2 class="section-title">Event Terkini</h2>
+      <div class="event-grid">
+        <img src="volunteer.png" alt="volunteer" />
+        <img src="donasi.jpeg" alt="donasi" />
+        <img src="volunteer.png" alt="volunteer" />
+        <img src="donasi.jpeg" alt="donasi" />
+      </div>
+    </section>
+
+    <section
+      id="campaign-section"
+      class="container section-spacing footer-margin"
+    >
+      <h2 class="section-title">Campaign Terbaru</h2>
+      <div id="campaign-grid" class="campaign-grid"></div>
+    </section>
+
+    <footer class="main-footer">
+      <p>&copy; 2026 Kebaikan Digital. Seluruh Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
