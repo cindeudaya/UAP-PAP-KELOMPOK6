@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebaikan Digital - Riwayat Donasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="riwayatDonasi.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="logo-pap.png" alt="logo" />
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Beranda</a>
+                <a href="#">Campaign</a>
+                <a href="#">Event</a>
+                <a href="#">Tentang Kami</a>
+            </nav>
+            <div class="navbar-actions">
+                <button class="btn-icon" aria-label="Notifikasi">
+                    <img src="logo-notifikasi.png" alt="notifikasi" width="30" height="22" />
+                </button>
+                <button class="btn-avatar" aria-label="Buka profil">
+                    <figure class="avatar-circle small" aria-hidden="true">
+                        <img src="logo-profil.png" alt="avatar" width="34" height="34" />
+                    </figure>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="main-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" aria-label="Menu profil">
+
+            <nav class="sidebar-nav" aria-label="Navigasi akun">
+                <ul role="list">
+                    <li>
+                        <a href="profile.html" class="sidebar-item">
+                            <span>Akun Saya</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="RiwayatDonasi.html" class="sidebar-item active" aria-current="page">
+                            <span>Riwayat Donasi</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pengaturan.html" class="sidebar-item">
+                            <span>Pengaturan</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bantuan.html" class="sidebar-item">
+                            <span>Bantuan</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="total-donasi-card">
+                <p class="total-donasi-label">Total Donasi Anda</p>
+                <p class="total-donasi-amount">Rp 700.000</p>
+                <div class="total-donasi-bar">
+                    <div class="total-donasi-bar-fill"></div>
+                </div>
+                <button class="btn-kelola" onclick="showAlert('Kelola Donasi')">Kelola Donasi</button>
+            </div>
+
+        </aside>
+
+        <section class="content-area" aria-label="Riwayat donasi">
+            <div class="search-bar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="search" placeholder="Cari event atau campaign" aria-label="Cari event atau campaign" />
+            </div>
+
+            <div class="donation-table-card">
+                <table class="donation-table" aria-label="Tabel riwayat donasi">
+                    <thead>
+                        <tr>
+                            <th scope="col">Event atau Campaign</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Jumlah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="campaign-info">
+                                    <img src="contoh-campaign.png" alt="Bantu Pengobatan Adik Rafa"
+                                        class="campaign-thumb"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                                    <div class="campaign-thumb-placeholder" style="display:none;"></div>
+                                    <div>
+                                        <p class="campaign-name">Bantu Pengobatan Adik Rafa</p>
+                                        <p class="campaign-id">ID: #BPAR-99B21</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="donation-date">24 Okt 2025<br />15.30 WIB</p>
+                            </td>
+                            <td>
+                                <span class="donation-amount">Rp. 500.000</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="campaign-info">
+                                    <img src="donasi run.png" alt="Donation Run 5K" class="campaign-thumb"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                                    <div class="campaign-thumb-placeholder" style="display:none;"></div>
+                                    <div>
+                                        <p class="campaign-name">Donation Run 5K</p>
+                                        <p class="campaign-id">ID: #DRK-99521</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="donation-date">24 Mar 2026<br />15.30 WIB</p>
+                            </td>
+                            <td>
+                                <span class="donation-amount">Rp. 200.000</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        function showAlert(msg) {
+            alert(msg);
+        }
+    </script>
+</body>
+
+</html>

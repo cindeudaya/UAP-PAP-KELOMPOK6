@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kebaikan Digital - Platform Donasi</title>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -18,39 +17,23 @@
           <img src="logo-pap.png" alt="logo" />
         </div>
         <nav class="nav-menu">
-          <a
-            href="/UAP-PAP-KELOMPOK6/code/dashboard/dashboard-tamu.html"
-            class="active"
-            >Beranda</a
-          >
-          <a href="/UAP-PAP-KELOMPOK6/code/campaign pengunjung/semua-campaign.html">Campaign</a>
-          <a
-            href="/UAP-PAP-KELOMPOK6/code/login-register-event/event-penggunjung.html"
-            >Event</a
-          >
-          <a href="/UAP-PAP-KELOMPOK6/code/about-us/about-tamu.html"
-            >Tentang Kami</a
-          >
+          <a href="/UAP-PAP-KELOMPOK6/code/dashboard/dahsboard-user.html" class="active">Beranda</a>
+          <a href="/UAP-PAP-KELOMPOK6/code/campaign pengguna/semua-campaign.html">Campaign</a>
+          <a href="/UAP-PAP-KELOMPOK6/code/login-register-event/event-pengguna.html">Event</a>
+          <a href="/UAP-PAP-KELOMPOK6/code/about-us/about-user.html">Tentang Kami</a>
         </nav>
-        <div class="nav-auth">
-          <a href="/UAP-PAP-KELOMPOK6/code/login-register-event/login.html">
-            <button onclick="showAlert('Masuk')" class="btn btn-outline">
-              Masuk
-            </button>
-          </a>
-          <a href="/UAP-PAP-KELOMPOK6/code/login-register-event/register.html">
-            <button
-              onclick="showAlert('Daftar')"
-              class="btn btn-primary"
-              href="/UAP-PAP-KELOMPOK6/code/login-register-event/register.html"
-            >
-              Daftar
-            </button>
-          </a>
+        <div class="nav-user">
+          <button class="notification-btn" aria-label="Notifikasi">
+            <img src="lonceng.png" alt="lonceng" />
+          </button>
+          <div class="profile-avatar">
+            <a href="/UAP-PAP-KELOMPOK6/code/profile/profile.html">
+            <img src="profile.png" alt="Foto Profil" />
+            </a>
+          </div>
         </div>
       </div>
     </header>
-
     <section class="hero container">
       <div class="hero-content">
         <h1>Kebaikan kecil hari ini, dampak besar untuk masa depan.</h1>
@@ -71,14 +54,11 @@
             class="btn btn-outline btn-large"
           >
             Tentang Kami
-          </button>
-        </a>
+          </button></a>
         </div>
       </div>
       <div class="hero-image-container">
-        <div class="hero-bg-circle">
           <img src="ilustrasi-dashboard.png" alt="Ilustrasi Berbagi" />
-        </div>
       </div>
     </section>
 
@@ -141,7 +121,6 @@
         <img src="donasi.jpeg" alt="donasi" />
       </div>
     </section>
-
     <section
       id="campaign-section"
       class="container section-spacing footer-margin"

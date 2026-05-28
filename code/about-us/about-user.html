@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebaikan Digital - Platform Donasi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="logo-pap.png" alt="logo" />
+        </div>
+        <nav class="nav-menu">
+          <a href="/UAP-PAP-KELOMPOK6/code/dashboard/dahsboard-user.html" >Beranda</a>
+          <a href="/UAP-PAP-KELOMPOK6/code/campaign pengguna/semua-campaign.html">Campaign</a>
+          <a href="/UAP-PAP-KELOMPOK6/code/login-register-event/event-pengguna.html">Event</a>
+          <a href="/UAP-PAP-KELOMPOK6/code/about-us/about-user.html" class="active">Tentang Kami</a>
+        </nav>
+        <div class="nav-user">
+          <button class="notification-btn" aria-label="Notifikasi">
+            <img src="lonceng.png" alt="lonceng" />
+          </button>
+          <div class="profile-avatar">
+            <a href="/UAP-PAP-KELOMPOK6/code/profile/profile.html">
+            <img src="profile.png" alt="Foto Profil" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Kebaikan kecil hari ini, dampak besar untuk masa depan.</h1>
+        <p>
+          Kebaikan Digital hadir untuk menghubungkan hati yang ingin berbagi
+          dengan mereka yang membutuhkan. Bersama, kita bisa menciptakan
+          perubahan positif untuk masa depan yang lebih baik.
+        </p>
+      </div>
+      <div class="hero-image-container">
+        <img src="ilustrasi-about.png" alt="Ilustrasi Berbagi" />
+      </div>
+    </section>
+
+    <section class="container section-spacing">
+      <div class="values-card">
+        <h2 class="values-title">Nilai yang Kami Pegang</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">
+              <img src="logo-amanah.png" alt="Amanah" />
+            </div>
+            <span>Amanah</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <img src="logo-kepedulian.png" alt="Kepedulian" />
+            </div>
+            <span>Kepedulian</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <img src="logo-integritas.png" alt="Integritas" />
+            </div>
+            <span>Integritas</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <img src="logo-berkelanjutan.png" alt="Berkelanjutan" />
+            </div>
+            <span>Berkelanjutan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section-spacing footer-margin">
+      <div class="team-grid">
+        <div
+          class="team-card reveal"
+          onclick="
+            showTeamDetail(
+              'Aya',
+              '255150600111034 ',
+              'Aya berfokus membuat halaman website yang berhubungan dengan campaign.',
+            )
+          "
+        >
+          <div class="team-avatar"></div>
+          <h3>Aya</h3>
+        </div>
+        <div
+          class="team-card reveal"
+          onclick="
+            showTeamDetail(
+              'Nazma',
+              '255150601111001 ',
+              'Nazma berfokus membuat halaman website yang berhubungan dengan login, register dan event.',
+            )
+          "
+        >
+          <div class="team-avatar"></div>
+          <h3>Nazma</h3>
+        </div>
+        <div
+          class="team-card reveal"
+          onclick="
+            showTeamDetail(
+              'Rindra',
+              '255150601111002 ',
+              'Rindra berfokus membuat halaman website yang berhubungan dengan profile.',
+            )
+          "
+        >
+          <div class="team-avatar"></div>
+          <h3>Rindra</h3>
+        </div>
+        <div
+          class="team-card reveal"
+          onclick="
+            showTeamDetail(
+              'Hafshah',
+              '255150601111005 ',
+              'Hafshah berfokus membuat halaman website yang berhubungan dengan dashboard dan about-us.',
+            )
+          "
+        >
+          <div class="team-avatar"></div>
+          <h3>Hafshah</h3>
+        </div>
+      </div>
+    </section>
+    <div id="teamModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-avatar" id="modalAvatar"></div>
+        <h2 id="modalName">Nama Anggota</h2>
+        <p id="modalRole" class="modal-role">NIM</p>
+        <p id="modalBio">
+          Tugas Anggota
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kebaikan Digital - Platform Donasi</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="profile.css" />
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <img src="logo-pap.png" alt="logo" />
+                </div>
+                <nav class="nav-menu">
+                    <a href="/UAP-PAP-KELOMPOK6/code/dashboard/dahsboard-user.html">Beranda</a>
+                    <a href="/UAP-PAP-KELOMPOK6/code/campaign pengguna/semua-campaign.html">Campaign</a>
+                    <a href="/UAP-PAP-KELOMPOK6/code/login-register-event/event-pengguna.html">Event</a>
+                    <a href="/UAP-PAP-KELOMPOK6/code/about-us/about-user.html">Tentang Kami</a>
+                </nav>
+                <div class="navbar-actions">
+                    <button class="btn-icon" aria-label="Notifikasi">
+                        <img src="logo-notifikasi.png" alt="notifikasi" width="30" height="22" />
+                    </button>
+                    <a href="/UAP-PAP-KELOMPOK6/code/profile/profile.html">
+                    <button class="btn-avatar" id="btnAvatar" aria-label="Buka profil">
+                        <figure class="avatar-circle small" aria-hidden="true">
+                            <img src="logo-profil.png" alt="avatar" width="34" height="34" />
+                        </figure>
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-layout">
+            <aside class="sidebar" aria-label="Menu profil">
+                <nav class="sidebar-nav" aria-label="Navigasi akun">
+                    <ul role="list">
+                        <li>
+                            <a href="profile.html" class="sidebar-item active" aria-current="page">
+                                <span>Akun Saya</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="RiwayatDonasi.html" class="sidebar-item">
+                                <span>Riwayat Donasi</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pengaturan.html" class="sidebar-item">
+                                <span>Pengaturan</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bantuan.html" class="sidebar-item">
+                                <span>Bantuan</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Metode Pembayaran -->
+                <section class="payment-card" aria-labelledby="paymentTitle">
+                    <h3 class="payment-title" id="paymentTitle">Metode Pembayaran</h3>
+                    <div class="payment-methods" role="group" aria-label="Pilih metode pembayaran">
+                        <button class="payment-btn active" aria-pressed="true">
+                            <span class="payment-logo gopay">GoPay</span>
+                        </button>
+                        <button class="payment-btn" aria-pressed="false">
+                            <span class="payment-logo qris">QRIS</span>
+                        </button>
+                    </div>
+                    <fieldset class="payment-form">
+                        <legend class="sr-only">Detail kartu pembayaran</legend>
+                        <label for="cardNumber">Card number*</label>
+                        <input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" maxlength="19"
+                            autocomplete="cc-number" inputmode="numeric" />
+                        <label for="expDate">Expiration date*</label>
+                        <input type="text" id="expDate" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" />
+                        <label for="secCode">Security code*</label>
+                        <input type="text" id="secCode" placeholder="•••" maxlength="3" autocomplete="cc-csc"
+                            inputmode="numeric" />
+                    </fieldset>
+                </section>
+
+            </aside>
+
+            <section class="content-area" aria-label="Konten akun saya">
+                <!-- Profile Header -->
+                <header class="profile-header">
+                    <div class="profile-header-left">
+                        <figure class="avatar-circle large" id="avatarPreview" aria-label="Foto profil">
+                            <img src="logo-profil.png" alt="foto profil" width="68" height="68" />
+                        </figure>
+                        <hgroup class="profile-header-info">
+                            <h1 id="displayName">Nama</h1>
+                            <p>Perbarui Profil</p>
+                        </hgroup>
+                    </div>
+                    <button class="btn-update" id="btnUpdate" aria-pressed="false">Update</button>
+                </header>
+
+                <article class="form-card" aria-labelledby="formTitle">
+                    <h2 class="form-title" id="formTitle">Informasi Pengguna</h2>
+
+                    <fieldset class="fieldset-group" disabled id="formFieldset">
+                        <legend class="sr-only">Form informasi pengguna</legend>
+
+                        <div class="form-group full">
+                            <label for="namaLengkap">Nama Lengkap</label>
+                            <input type="text" id="namaLengkap" placeholder="Masukkan nama lengkap" autocomplete="name" />
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" placeholder="contoh@email.com" autocomplete="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="telepon">Nomor Telepon</label>
+                                <input type="tel" id="telepon" placeholder="+62 8xx xxxx xxxx" autocomplete="tel" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tanggalLahir">Tanggal Lahir</label>
+                                <input type="date" id="tanggalLahir" autocomplete="bday" />
+                            </div>
+                            <div class="form-group">
+                                <label for="jenisKelamin">Jenis Kelamin</label>
+                                <select id="jenisKelamin">
+                                    <option value="">Pilih jenis kelamin</option>
+                                    <option value="L">Laki-laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="alamat">Alamat</label>
+                            <input type="text" id="alamat" placeholder="Masukkan alamat lengkap"
+                                autocomplete="street-address" />
+                        </div>
+                    </fieldset>
+
+                    <footer class="form-actions">
+                        <button class="btn-save hidden" id="btnSave">Simpan</button>
+                        <button class="btn-keluar" id="btnKeluar" type="button">Keluar</button>
+                    </footer>
+                </article>
+
+            </section>
+        </main>
+
+        <dialog class="modal-dialog" id="modalLogout" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+            <article class="modal-box">
+                <figure class="modal-icon" aria-hidden="true">
+                    <img src="logo - logout.png" alt="logout" width="32" height="32" />
+                </figure>
+                <h3 id="modalTitle">Keluar dari akun?</h3>
+                <p id="modalDesc">Kamu akan keluar dari Kebaikan Digital. Pastikan data sudah tersimpan.</p>
+                <footer class="modal-actions">
+                    <button class="btn-cancel" id="btnCancel" type="button">Batal</button>
+                    <button class="btn-confirm-logout" id="btnConfirmLogout" type="button">Ya, Keluar</button>
+                </footer>
+            </article>
+        </dialog>
+
+        <script src="profile.js"></script>
+    </body>
+
+</html>

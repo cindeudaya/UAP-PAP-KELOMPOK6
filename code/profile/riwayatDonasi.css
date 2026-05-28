@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfc;
+    color: #333333;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*navbar*/
+.navbar {
+    background-color: #EEF6F2;
+    border-bottom: 1px solid #f3f4f6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #1B824A;
+}
+
+.nav-menu a.active {
+    border-bottom: 2px solid #1B824A;
+    padding-bottom: 4px;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+
+button.btn-icon:hover {
+    background: #f0eeea;
+}
+
+button.btn-avatar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+figure.avatar-circle {
+    border-radius: 50%;
+    background: #e2dfd8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+figure.avatar-circle.small {
+    width: 34px;
+    height: 34px;
+}
+
+/* layout */
+main.main-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    align-items: start;
+}
+
+/* 4 bar */
+aside.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+nav.sidebar-nav ul li a.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e2dfd8;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+
+nav.sidebar-nav ul li a.sidebar-item:hover {
+    background: #f0faf4;
+    border-color: #d1f0de;
+    color: #1a8f4a;
+}
+
+nav.sidebar-nav ul li a.sidebar-item.active, nav.sidebar-nav ul li a.sidebar-item[aria-current="page"] {
+    background: #f0faf4;
+    border-color: #22a85a;
+    color: #166f3a;
+}
+
+nav.sidebar-nav ul li a.sidebar-item svg {
+    opacity: 0.5;
+}
+
+nav.sidebar-nav ul li a.sidebar-item.active svg, nav.sidebar-nav ul li a.sidebar-item[aria-current="page"] svg {
+    opacity: 1;
+    stroke: #1a8f4a;
+}
+
+section.content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #e2dfd8;
+    border-radius: 12px;
+    padding: 10px 16px;
+}
+
+.search-bar svg {
+    color: #9c9990;
+    flex-shrink: 0;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #2c2c2a;
+    background: transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar input::placeholder {
+    color: #9c9990;
+}
+
+/* donasi */
+.donation-table-card {
+    background: #ffffff;
+    border: 1px solid #e2dfd8;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.donation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.donation-table thead tr {
+    background: #d1f0de;
+}
+
+.donation-table thead th {
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #166f3a;
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.donation-table thead th:last-child {
+    text-align: right;
+}
+
+.donation-table tbody tr {
+    border-bottom: 1px solid #f0eeea;
+    transition: background 0.15s;
+}
+
+.donation-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.donation-table tbody tr:hover {
+    background: #f8f8f7;
+}
+
+.donation-table tbody td {
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #2c2c2a;
+    vertical-align: middle;
+}
+
+.donation-table tbody td:last-child {
+    text-align: right;
+}
+
+.campaign-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.campaign-thumb {
+    width: 56px;
+    height: 42px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #e2dfd8;
+    flex-shrink: 0;
+}
+
+.campaign-thumb-placeholder {
+    width: 56px;
+    height: 42px;
+    border-radius: 6px;
+    background: #e2dfd8;
+    flex-shrink: 0;
+}
+
+.campaign-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: #2c2c2a;
+    line-height: 1.3;
+}
+
+.campaign-id {
+    font-size: 11px;
+    color: #9c9990;
+    margin-top: 2px;
+}
+
+.donation-date {
+    font-size: 13px;
+    color: #5f5e5a;
+    line-height: 1.5;
+}
+
+.donation-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a8f4a;
+}
+
+/* ===== TOTAL DONASI CARD ===== */
+.total-donasi-card {
+    background: #ffffff;
+    border: 1px solid #e2dfd8;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.total-donasi-label {
+    font-size: 13px;
+    color: #5f5e5a;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.total-donasi-amount {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a8f4a;
+    margin-bottom: 12px;
+}
+
+.total-donasi-bar {
+    width: 100%;
+    height: 6px;
+    background: #e2dfd8;
+    border-radius: 99px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.total-donasi-bar-fill {
+    height: 100%;
+    width: 70%;
+    background: #22a85a;
+    border-radius: 99px;
+}
+
+.btn-kelola {
+    width: 100%;
+    padding: 10px;
+    background: #1a8f4a;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-kelola:hover {
+    background: #166f3a;
+}
+
+@media (max-width: 768px) {
+    main.main-layout {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
