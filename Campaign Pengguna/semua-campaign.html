@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Campaign - Kebaikan Digital</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="semua-campaign.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo" onclick="window.location.href='semua-campaign.html'">
+                <img src="logo  1.png" alt="Logo">
+                <span>Kebaikan Digital</span>
+            </div>
+
+            <div class="nav-center">
+                <a href="semua-campaign.html" class="active">Beranda</a>
+                <a href="semua-campaign.html">Campaign</a>
+                <a href="#">Event</a>
+                <a href="#">Tentang Kami</a>
+            </div>
+
+            <div class="nav-auth">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container page-content">
+
+        <div class="header-section">
+            <h1>Semua Campaign</h1>
+            <p>Temukan berbagai campaign kebaikan yang sedang berjalan.</p>
+        </div>
+
+        <div class="filter-container">
+
+            <div class="tabs-kategori">
+                <button class="tab-item active" onclick="filterKategori('semua', this)">Semua</button>
+                <button class="tab-item" onclick="filterKategori('kesehatan', this)">Kesehatan</button>
+                <button class="tab-item" onclick="filterKategori('pendidikan', this)">Pendidikan</button>
+                <button class="tab-item" onclick="filterKategori('kemanusiaan', this)">Kemanusiaan</button>
+                <button class="tab-item" onclick="filterKategori('lingkungan', this)">Lingkungan</button>
+            </div>
+
+            <button class="btn-filter">
+                <i class="fa-solid fa-sliders"></i>
+                Filter
+            </button>
+
+        </div>
+
+        <div class="campaign-grid">
+
+            <script>
+
+                for(let i = 0; i < 8; i++) {
+
+                    document.write(`
+
+                    <div class="campaign-card" onclick="keHalamanDetail()">
+
+                        <div class="card-image">
+                            <img src="Rectangle 33.png" alt="Campaign">
+                        </div>
+
+                        <div class="card-content">
+
+                            <h3 class="card-title">
+                                Bantu Pengobatan Adik Rafa
+                            </h3>
+
+                            <div class="card-funding">
+                                <span class="raised">Rp 7.500.000</span>
+                                <span class="label-raised">Terkumpul</span>
+                            </div>
+
+                            <div class="progress-container">
+
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" style="width: 75%;"></div>
+                                </div>
+
+                                <span class="progress-text">75%</span>
+
+                            </div>
+
+                            <p class="days-left">12 hari lagi</p>
+
+                        </div>
+
+                    </div>
+
+                    `);
+
+                }
+
+            </script>
+
+        </div>
+
+    </main>
+
+    <script src="semua-campaign.js"></script>
+
+</body>
+</html>
